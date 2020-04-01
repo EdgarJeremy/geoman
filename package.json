@@ -1,6 +1,6 @@
 {
   "name": "@edgarjeremy/geoman",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./build/geoman.js",
   "types": "./build/geoman.d.ts",
