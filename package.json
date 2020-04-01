@@ -16,6 +16,10 @@
     "prepublish": "npm run build"
   },
   "author": "EdgarJeremy <edgarpontoh3141@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgarJeremy/geoman.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.7",
