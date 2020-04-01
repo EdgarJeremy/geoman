@@ -1,6 +1,6 @@
-# geoman-client
+# @edgarjeremy/geoman
 
-`geoman-client` adalah modul untuk pengkoneksian client map dengan server GeoMan. Server yang dimaksud adalah server yang memiliki service backend GeoMan
+`@edgarjeremy/geoman` adalah modul untuk pengkoneksian client map dengan server geoman.
 
 ## Daftar Isi
 - [Instalasi](#instalasi)
@@ -10,45 +10,46 @@
 ---
 
 ## Instalasi
-Menggunakan CDN
-
-[geoman.min.js](https://unpkg.com/geoman-client@latest/dist/geoman.min.js)
-
-```html
-<script src="https://unpkg.com/geoman-client@latest/dist/geoman.min.js"></script>
-```
-
-Atau menggunakan package manager
+Menggunakan package manager
 
 NPM :
 
-`npm install geoman-client`
+`npm install @edgarjeremy/geoman`
 
 Yarn :
 
-`yarn add geoman-client`
+`yarn add @edgarjeremy/geoman`
+
+Menggunakan CDN
+
+[geoman.min.js](https://unpkg.com/@edgarjeremy/geoman@latest/dist/geoman.min.js)
+
+```html
+<script src="https://unpkg.com/@edgarjeremy/geoman@latest/dist/geoman.min.js"></script>
+```
+
 
 ---
 
 ## Inisialisasi Map
-Class `GeoMan` akan tersedia di objek `window` jika menggunakan CDN. Jika menggunakan package manager, import class `GeoMan` dari modul `geoman-client`
+Class `GeoMan` akan tersedia di objek `window` jika menggunakan CDN. Jika menggunakan package manager, import class `GeoMan` dari modul `@edgarjeremy/geoman`
 
 ```javascript
-import GeoMan from 'geoman-client'; // ES6
+import GeoMan from '@edgarjeremy/geoman'; // ES6
 // atau
-const GeoMan = require('geoman-client'); // CommonJS
+const GeoMan = require('@edgarjeremy/geoman'); // CommonJS
 // atau
 const GeoMan = window.GeoMan; // browser
 
 const map = new GeoMan(
-  'http://localhost', // host server GeoMan
-  8080, // port server GeoMan
+  'http://localhost', // host server geoman
+  8080, // port server geoman
   {
-    container: 'map', // id container di HTML
+    container: 'map', // id container HTML
     center: [124.842624, 1.4794296], // koordinat tengah map [longitude, latitude]
     zoom: 15, // zoom map
   },
-  'id_map' // id basemap di server GeoMan
+  'id_map' // id basemap di server geoman
 );
 ```
 
