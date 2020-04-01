@@ -83,7 +83,12 @@ export default class GeoMan {
   } & mapbox.EventData) | (mapbox.MapMouseEvent & {
     features?: mapbox.MapboxGeoJSONFeature[] | undefined;
   } & mapbox.EventData)) => void) {
-    const layerName: string = `tc-basemap-layer-${regionName}-label`;
+    const d = {
+      district: 'ds',
+      subdistrict: 'ss',
+      neighbor: 'ns'
+    }
+    const layerName: string = `tc-${d[regionName]}-label`;
     this.map.on(ev, layerName, (d) => cb(d.features ? d.features[0] : null, d));
     this.map.on('mouseenter', layerName, (e) => {
       this.map.getCanvas().style.cursor = 'pointer';
