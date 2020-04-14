@@ -5,6 +5,7 @@
 ## Daftar Isi
 - [Instalasi](#instalasi)
 - [Inisialisasi Map](#inisialisasi-map)
+- [Mengubah Basemap](#mengubah-basemap)
 - [Menyematkan Event Ke Label Wilayah](#menyematkan-event-ke-label-wilayah)
 
 ---
@@ -51,6 +52,12 @@ const map = new GeoMan(
   },
   'id_map' // id basemap di server geoman
 );
+```
+
+## Mengubah Basemap
+Mengubah basemap yang akan ditampilkan secara <i>programmatic</i>
+```javascript
+map.setBasemap(id: string): void
 ```
 
 ---
