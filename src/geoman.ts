@@ -49,6 +49,14 @@ export default class GeoMan {
   }
 
   /**
+   * Set basemap
+   * @param id basemap ID
+   */
+  public setBasemap(id: string) {
+    this.map.setStyle(`${this.fullURL}/map/maps/${id.toLowerCase()}`);
+  }
+
+  /**
    * Tambah GeoJSON ke map
    * @param id string unik untuk menandai layer
    * @param data data geojson
