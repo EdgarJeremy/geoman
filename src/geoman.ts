@@ -53,7 +53,7 @@ export default class GeoMan {
    * @param id basemap ID
    */
   public setBasemap(id: string) {
-    this.map.setStyle(`${this.fullURL}/map/maps/${id.toLowerCase()}`);
+    this.map.setStyle(`${this.fullURL}/map/maps/${id.toLowerCase()}?port=${this.port}`);
   }
 
   /**
