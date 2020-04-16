@@ -35,7 +35,7 @@ export default class GeoMan {
     link.href = 'https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css';
     document.head.appendChild(link);
 
-    options.style = `${this.fullURL}/map/maps/${id.toLowerCase()}`;
+    options.style = `${this.fullURL}/map/maps/${id.toLowerCase()}?port=${this.port}`;
     this.center = options.center;
     this.zoom = options.zoom;
     this.map = new mapbox.Map(options);
